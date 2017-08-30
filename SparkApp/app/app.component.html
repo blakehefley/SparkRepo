@@ -1,0 +1,29 @@
+<!-- >> angular-sidedrawer-location -->
+<ActionBar>
+    <Label *ngIf="getPlatform() == 'Android'" (tap)="onLeftLocationTap()" text="&#xf0c9;" class="font-awesome"></Label>
+    <ActionItem *ngIf="getPlatform() == 'iOS'" ios.position="left" (tap)="onLeftLocationTap()"> 
+        <Label text="&#xf0c9;" class="font-awesome"></Label>
+    </ActionItem>
+</ActionBar>
+<RadSideDrawer [drawerLocation]="currentLocation" tkExampleTitle tkToggleNavButton drawerContentSize="1000">
+    <!-- << angular-sidedrawer-location -->
+    <FlexboxLayout tkDrawerContent class="sideStackLayout" flexDirection="row">
+        <ScrollView width="300" flexGrow="0" backgroundColor="#EEE">
+            <StackLayout width="300">
+                <Label [nsRouterLink]="['/home']" text="Home" class="sideLabel navLink sideLightGrayLabel" (tap)="onCloseDrawerTap()"></Label>
+                <Label text="Part 219 Control of Alcohol & Drug Use" class="headerLink"></Label>
+                    <Label text="FAQs" class="subLink"></Label>
+                    <Label text="Post-Accident Decision Guide" class="subLink"></Label>
+                    <Label text="Reasonable Suspicion Form" class="subLink"></Label>
+                <Label text="Critical Incident Response" class="navLink"></Label>
+                <Label text="2016 Emergency Response Guide" class="navLink"></Label>
+                <Label [nsRouterLink]="['/about']" text="Demo Link" class="sideLabel navLink sideLightGrayLabel" (tap)="onCloseDrawerTap()"></Label>
+            </StackLayout>
+        </ScrollView >
+        <StackLayout flexGrow="1" backgroundColor="black" opacity="0.2">
+        </StackLayout>
+    </FlexboxLayout>
+    <GridLayout tkMainContent class="mainContent" flexDirection="column">
+        <router-outlet></router-outlet>
+    </GridLayout>
+</RadSideDrawer>

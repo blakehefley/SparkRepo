@@ -1,0 +1,35 @@
+
+.font-awesome{
+    font-family: "FontAwesome";
+    font-size:30px;
+}
+.sideLabel{
+    color:green;
+}
+
+.sideStackLayout{
+    width:100%;
+    border-radius:5px;
+}
+
+.headerLink{
+    color:#AAA;
+    padding-left:15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size: 15px;
+}
+.subLink{
+    color:black;
+    padding-left:50px;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size: 15px;
+}
+.navLink{
+    color:black;
+    padding-left:15px;
+    padding-top:15px;
+    padding-bottom:15px;
+    font-size: 15px;
+}
